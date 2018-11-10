@@ -1,6 +1,6 @@
 'use strict';
 
-const personsFolder = './persones/';
+const personsFolder = './people/';
 const fs = require('fs');
 const express = require('express');
 
@@ -13,23 +13,20 @@ const app = express();
 app.get('/', (req, res) => {
 
 
-var llistaNoms = '';
+var namesList = '';
 
 fs.readdir(personsFolder, (err, files) => {
   
   files.forEach(file => {
-	llistaNoms += '<li>' + file + '</li>';
-	console.log (llistaNoms);
-
-
+	namesList += '<li>' + file + '</li>';
   });
   
   const html = `
   <html>
     <body>
-      <h1>Llista de classe</h1>
+      <h1>Name List</h1>
       <ul>
-  	${llistaNoms}
+  	${namesList}
      </ul>
     </body>
   </html>`;
