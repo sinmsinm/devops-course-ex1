@@ -1,0 +1,13 @@
+{
+  "name": "devops_web_app",
+  "version": "1.0.0",
+  "description": "Aplicació de proves en Node.json",
+  "author": "Alexandre Balleste <alex.balleste@gmail.com>",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  }
+}
