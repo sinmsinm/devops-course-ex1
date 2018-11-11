@@ -3,6 +3,7 @@
 const personsFolder = './people/';
 const fs = require('fs');
 const express = require('express');
+const os = require('os');
 
 // Constants
 const PORT = 8080;
@@ -28,6 +29,8 @@ fs.readdir(personsFolder, (err, files) => {
       <ul>
   	${namesList}
      </ul>
+	<h1>System info</h1>
+	<p>Host name ${os.hostname()}</p>
     </body>
   </html>`;
 

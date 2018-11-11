@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  mywebservice:
+    image: mywebserverimage
+    ports:
+        - 8080
+    deploy:
+        replicas: 2
+  balancer:
+    image: dockercloud/haproxy
+    links:
+        - mywebservice
+    volumes:
+        - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+        - 9090:80
