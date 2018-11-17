@@ -4,6 +4,9 @@ const personsFolder = './persones/';
 const fs = require('fs');
 const express = require('express');
 
+//aixo es un canvi d'un fitxer 
+
+
 // Constants
 const PORT = 8080;
 const HOST = '0.0.0.0';
